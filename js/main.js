@@ -224,27 +224,27 @@ function initDonationForm() {
 }
 
 // Scroll to Top
-function initScrollToTop() {
-    const scrollBtn = document.createElement('div');
-    scrollBtn.className = 'scroll-to-top';
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    document.body.appendChild(scrollBtn);
+// function initScrollToTop() {
+//     const scrollBtn = document.createElement('div');
+//     scrollBtn.className = 'scroll-to-top';
+//     scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+//     document.body.appendChild(scrollBtn);
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            scrollBtn.classList.add('visible');
-        } else {
-            scrollBtn.classList.remove('visible');
-        }
-    });
+//     window.addEventListener('scroll', function() {
+//         if (window.scrollY > 300) {
+//             scrollBtn.classList.add('visible');
+//         } else {
+//             scrollBtn.classList.remove('visible');
+//         }
+//     });
     
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
+//     scrollBtn.addEventListener('click', function() {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     });
+// }
 
 // Scroll Animations
 function initAnimations() {

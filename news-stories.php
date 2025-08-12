@@ -179,6 +179,21 @@
         </div>
     </section>
 
+    <!-- Latest News Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Latest News</h2>
+            <p class="lead">Stay updated with our recent achievements and milestones</p>
+        </div>
+        
+        <div class="row" id="latest-news">
+            <?php include 'php/get_latest_blogs.php'; ?>
+        </div>
+    </div>
+</section>
+
+
     <!-- Impact Stories Section -->
     <section class="section-padding bg-light">
         <div class="container">

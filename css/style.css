@@ -176,6 +176,11 @@ h1, h2, h3, h4, h5, h6 {
     to { opacity: 1; }
 }
 
+ #blogsList {
+  max-height: 232px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-content h1 { font-size: 2.5rem; }
@@ -184,4 +189,51 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 576px) {
     .hero-content h1 { font-size: 2rem; }
+}
+
+/* .admin-dashboard, .admin-navbar {
+  display: none;
+} */
+
+/* i.fas.fa-arrow-up {
+    display: none !important;
+} */
+
+.admin-dashboard-container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.dashboard-header {
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+.form-card, .stats-section .card, .card {
+    border-radius: 10px;
+}
+.form-control, .form-select {
+    border-radius: 8px;
+}
+.card-body h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.bg-gradient-primary {
+    background: linear-gradient(45deg, #0062E6, #33AEFF);
+}
+.bg-gradient-success {
+    background: linear-gradient(45deg, #28a745, #5dd17c);
+}
+.bg-gradient-info {
+    background: linear-gradient(45deg, #17a2b8, #5edaf0);
+}
+.bg-gradient-warning {
+    background: linear-gradient(45deg, #ffc107, #ffd75c);
+}
+.card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.btn {
+    border-radius: 8px;
 }
