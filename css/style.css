@@ -1,7 +1,7 @@
 /* Custom CSS for Akshaya Patra Website */
 :root {
     --primary-color: #FF6900;
-    --secondary-color: #2E86C1;
+    --secondary-color: #e62d26;
     --accent-color: #F39C12;
     --text-dark: #2C3E50;
     --text-light: #7F8C8D;
@@ -23,7 +23,9 @@ body {
     background-color: #fff5f5;
     color: #e62d26;
 }
-
+.text-sankat {
+    color: #e62d26;;
+}
 /* Buttons */
 .btn-primary,
 button,
@@ -34,6 +36,8 @@ button,
     padding: 10px 20px;
     cursor: pointer;
 }
+
+
 
 button:hover,
 .btn:hover {
@@ -55,7 +59,9 @@ button:hover,
 .nav-link:hover {
     color: #e62d26;
 }
-
+.span {
+    color: #e62d26;
+}
 /* Hero Section */
 .hero-overlay {
     position: relative;
@@ -237,3 +243,5 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
     border-radius: 8px;
 }
+
+
