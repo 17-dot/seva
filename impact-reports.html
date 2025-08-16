@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Reports - Sankat Saathi Seva Foundation</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiNGRjY5MDAiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIj4KPHA+QUs8L3A+Cjwvc3ZnPgo8L2NpcmNsZT4KPC9zdmc+" alt="Akshaya Patra" class="me-2">
+                <span class="fw-bold text-primary">Akshaya Patra</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="what-we-do.html">What We Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news-stories.php">News & Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-to-help.html">How To Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="get-involved.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="impact-reports.html">Impact Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.php">Blogs</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="index.html#donate" class="btn btn-primary me-2">Donate Now</a>
+                    <!-- <a href="admin.html" class="btn btn-outline-secondary">Admin</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
+                    <span class="fw-bold text-sankat" style="color: #e62d26;">Sankat Saathi</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="what-we-do.html">What We Do</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news-stories.php">News & Stories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-to-help.html">How To Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="get-involved.html">Get Involved</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="impact-reports.html">Impact Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blogs.php">Blogs</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="#donate" class="btn btn-primary me-2 ">Donate Now</a>
+                        <!-- <a href="admin.html" class="btn btn-outline-secondary">Admin</a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="height: 60vh; background-image: url('https://pixabay.com/get/gf8d87f63a6bfb53ddbb9f1904c7f14eb4d4b081ba20569964e382e9a821b87ca11d079a6b340c30089fcec5dae3f38d6bf2da643f51739cfe0ef06e48de0a111_1280.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold text-white mb-4">Impact Reports</h1>
+                        <p class="lead text-white">Transparency and accountability through comprehensive reporting on our progress, achievements, and impact on children's lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Impact Metrics -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Impact at a Glance</h2>
+                <p class="lead">Current statistics showing our reach and effectiveness</p>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+                            <h3 class="stat-number fw-bold text-primary" data-target="4000000000">0</h3>
+                            <h6 class="fw-bold">Meals Served</h6>
+                            <p class="text-muted small">Since inception, providing nutritious meals to children across India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-child fa-3x text-primary mb-3"></i>
+                            <h3 class="stat-number fw-bold text-primary" data-target="2250000">0</h3>
+                            <h6 class="fw-bold">Children Benefitted</h6>
+                            <p class="text-muted small">Currently receiving daily nutritious meals through our programs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-school fa-3x text-primary mb-3"></i>
+                            <h3 class="stat-number fw-bold text-primary" data-target="23111">0</h3>
+                            <h6 class="fw-bold">Schools Reached</h6>
+                            <p class="text-muted small">Educational institutions across multiple states benefiting from our programs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                            <h3 class="stat-number fw-bold text-primary" data-target="78">0</h3>
+                            <h6 class="fw-bold">Kitchen Locations</h6>
+                            <p class="text-muted small">Centralized kitchens ensuring quality and scale across India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Charts Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Impact Visualization</h2>
+                <p class="lead">Interactive charts showing our growth and impact over the years</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Meals Served Over Time</h5>
+                            <canvas id="mealsChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Geographic Distribution</h5>
+                            <canvas id="statesChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Program Distribution</h5>
+                            <canvas id="programsChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">School Attendance Impact</h5>
+                            <canvas id="attendanceChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Annual Reports -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Annual Reports</h2>
+                <p class="lead">Comprehensive yearly reports detailing our activities, achievements, and financial transparency</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-bold">Annual Report 2024</h5>
+                            <p class="text-muted">Complete overview of our achievements, financial statements, and impact metrics for 2024.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i>4 Billion meals milestone</li>
+                                <li><i class="fas fa-check text-success me-2"></i>75th kitchen inauguration</li>
+                                <li><i class="fas fa-check text-success me-2"></i>UN recognition</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Expanded reach to Bihar</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary" onclick="downloadReport('2024')">
+                                <i class="fas fa-download me-2"></i>Download Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-bold">Annual Report 2023</h5>
+                            <p class="text-muted">Detailed report showcasing our continued growth and impact in fighting classroom hunger.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i>Served 1.8 billion meals</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Reached 2.1 million children</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Opened 5 new kitchens</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Enhanced digital operations</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary" onclick="downloadReport('2023')">
+                                <i class="fas fa-download me-2"></i>Download Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-bold">Annual Report 2022</h5>
+                            <p class="text-muted">Comprehensive review of our resilience and adaptation during challenging times.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-success me-2"></i>Maintained meal distribution</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Implemented safety protocols</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Digital transformation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Community partnerships</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary" onclick="downloadReport('2022')">
+                                <i class="fas fa-download me-2"></i>Download Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Categories -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Multi-Dimensional Impact</h2>
+                <p class="lead">Our work creates positive change across multiple areas of child development</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold mb-0">Educational Outcomes</h5>
+                            </div>
+                            <div class="impact-metrics">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">97%</h4>
+                                        <small class="text-muted">Attendance Improvement</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">23%</h4>
+                                        <small class="text-muted">Learning Performance</small>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">15%</h4>
+                                        <small class="text-muted">Enrollment Increase</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">89%</h4>
+                                        <small class="text-muted">Retention Rate</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-heartbeat fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold mb-0">Nutritional Impact</h5>
+                            </div>
+                            <div class="impact-metrics">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">85%</h4>
+                                        <small class="text-muted">Nutritional Goals Met</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">78%</h4>
+                                        <small class="text-muted">Reduced Malnutrition</small>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">92%</h4>
+                                        <small class="text-muted">Health Improvement</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">67%</h4>
+                                        <small class="text-muted">Weight Gain</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold mb-0">Social Impact</h5>
+                            </div>
+                            <div class="impact-metrics">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">94%</h4>
+                                        <small class="text-muted">Community Satisfaction</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">156K</h4>
+                                        <small class="text-muted">Jobs Created</small>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">82%</h4>
+                                        <small class="text-muted">Parent Engagement</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h4 class="fw-bold text-success">76%</h4>
+                                        <small class="text-muted">Girl Child Enrollment</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Transparency -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Financial Transparency</h2>
+                <p class="lead">How your donations are utilized to maximize impact</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <h4 class="fw-bold text-center mb-4">Fund Utilization (FY 2024)</h4>
+                            <canvas id="fundsChart" height="200"></canvas>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold">Revenue Sources</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-circle text-primary me-2"></i>Individual Donations: 45%</li>
+                                        <li><i class="fas fa-circle text-success me-2"></i>Corporate CSR: 35%</li>
+                                        <li><i class="fas fa-circle text-info me-2"></i>Government Grants: 15%</li>
+                                        <li><i class="fas fa-circle text-warning me-2"></i>International Funding: 5%</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold">Expense Breakdown</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-circle text-danger me-2"></i>Program Activities: 87%</li>
+                                        <li><i class="fas fa-circle text-secondary me-2"></i>Administrative: 8%</li>
+                                        <li><i class="fas fa-circle text-dark me-2"></i>Fundraising: 5%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications and Awards -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Certifications & Recognition</h2>
+                <p class="lead">Our commitment to quality and transparency has been recognized globally</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-certificate fa-3x text-warning mb-3"></i>
+                            <h6 class="fw-bold">ISO 22000:2018</h6>
+                            <p class="text-muted small">Food Safety Management System certification for 47 kitchens</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                            <h6 class="fw-bold">GuideStar India Seal</h6>
+                            <p class="text-muted small">Platinum Seal of Transparency for financial accountability</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-globe fa-3x text-success mb-3"></i>
+                            <h6 class="fw-bold">UN Recognition</h6>
+                            <p class="text-muted small">Acknowledged at UN Headquarters for 4 Billion meals milestone</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="fas fa-shield-alt fa-3x text-info mb-3"></i>
+                            <h6 class="fw-bold">FCRA Compliance</h6>
+                            <p class="text-muted small">Full compliance with Foreign Contribution Regulation Act</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research and Studies -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Research & Studies</h2>
+                <p class="lead">Independent research validating our impact and effectiveness</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-primary">Nutrition Impact Study</h5>
+                            <p class="text-muted small mb-2">Conducted by: Indian Institute of Science | 2024</p>
+                            <p>Comprehensive study showing significant improvement in nutritional status and cognitive development among children receiving our meals.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>15% improvement in BMI scores</li>
+                                <li><i class="fas fa-check text-success me-2"></i>23% increase in cognitive test scores</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Reduced anemia by 34%</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-sm" onclick="downloadStudy('nutrition-2024')">
+                                <i class="fas fa-download me-1"></i>Download Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-primary">Educational Outcome Analysis</h5>
+                            <p class="text-muted small mb-2">Conducted by: National Council of Educational Research | 2023</p>
+                            <p>Analysis of learning outcomes and school attendance patterns in schools served by our program versus control groups.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>97% improvement in attendance</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Higher test scores in math and reading</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Reduced dropout rates by 45%</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-sm" onclick="downloadStudy('education-2023')">
+                                <i class="fas fa-download me-1"></i>Download Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-primary">Economic Impact Assessment</h5>
+                            <p class="text-muted small mb-2">Conducted by: Indian Statistical Institute | 2023</p>
+                            <p>Assessment of economic benefits to families and communities through our meal programs and local employment generation.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>₹850 monthly savings per family</li>
+                                <li><i class="fas fa-check text-success me-2"></i>156,000 jobs created</li>
+                                <li><i class="fas fa-check text-success me-2"></i>₹12.5 billion economic impact</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-sm" onclick="downloadStudy('economic-2023')">
+                                <i class="fas fa-download me-1"></i>Download Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-primary">Gender Impact Study</h5>
+                            <p class="text-muted small mb-2">Conducted by: Tata Institute of Social Sciences | 2022</p>
+                            <p>Analysis of how our programs specifically impact girl child education and gender equality in rural communities.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>76% increase in girl enrollment</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Reduced child marriage by 28%</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Higher secondary education completion</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary btn-sm" onclick="downloadStudy('gender-2022')">
+                                <i class="fas fa-download me-1"></i>Download Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Be Part of Our Impact Story</h2>
+            <p class="lead mb-4">Your support helps us create measurable, lasting change in children's lives across India</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <a href="how-to-help.html" class="btn btn-light btn-lg me-3 mb-2">Support Our Mission</a>
+                    <a href="get-involved.html" class="btn btn-outline-light btn-lg mb-2">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3">Sankat Saathi Seva Foundation</h5>
+                    <p>Eliminating classroom hunger and supporting the Right to Education of children from socio-economically challenging backgrounds.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="who-we-are.html" class="text-light text-decoration-none">Who We Are</a></li>
+                        <li><a href="what-we-do.html" class="text-light text-decoration-none">What We Do</a></li>
+                        <li><a href="impact-reports.html" class="text-light text-decoration-none">Impact Reports</a></li>
+                        <li><a href="blogs.php" class="text-light text-decoration-none">Blogs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Get Involved</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="how-to-help.html" class="text-light text-decoration-none">How To Help</a></li>
+                        <li><a href="get-involved.html" class="text-light text-decoration-none">Volunteer</a></li>
+                        <li><a href="index.html#donate" class="text-light text-decoration-none">Donate</a></li>
+                        <li><a href="get-involved.html" class="text-light text-decoration-none">Partner With Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Bengaluru, Karnataka, India</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@akshayapatra.org</p>
+                        <p><i class="fas fa-phone me-2"></i>+91 80 3015 0000</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sankat Saathi Seva Foundation. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize charts and animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCharts();
+            setupDownloadHandlers();
+        });
+        
+        function initializeCharts() {
+            // Meals Over Time Chart
+            const mealsCtx = document.getElementById('mealsChart').getContext('2d');
+            new Chart(mealsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Meals Served (Millions)',
+                        data: [1800, 2100, 1900, 2200, 2800, 3200, 3650],
+                        borderColor: '#FF6900',
+                        backgroundColor: 'rgba(255, 105, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+            
+            // States Distribution Chart
+            const statesCtx = document.getElementById('statesChart').getContext('2d');
+            new Chart(statesCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Karnataka', 'Andhra Pradesh', 'Telangana', 'Tamil Nadu', 'Gujarat', 'Others'],
+                    datasets: [{
+                        label: 'Schools Served',
+                        data: [5200, 3800, 2900, 2100, 1800, 7311],
+                        backgroundColor: [
+                            '#FF6900', '#2E86C1', '#F39C12', '#E74C3C', '#8E44AD', '#27AE60'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+            
+            // Programs Distribution Chart
+            const programsCtx = document.getElementById('programsChart').getContext('2d');
+            new Chart(programsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['PM POSHAN', 'Breakfast Program', 'Anganwadi Feeding', 'Special Programs'],
+                    datasets: [{
+                        data: [78, 12, 7, 3],
+                        backgroundColor: ['#FF6900', '#2E86C1', '#F39C12', '#E74C3C']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+            
+            // Attendance Impact Chart
+            const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+            new Chart(attendanceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Before Akshaya Patra', 'After Akshaya Patra'],
+                    datasets: [{
+                        label: 'Attendance Rate (%)',
+                        data: [67, 97],
+                        backgroundColor: ['#E74C3C', '#27AE60']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+            
+            // Fund Utilization Chart
+            const fundsCtx = document.getElementById('fundsChart').getContext('2d');
+            new Chart(fundsCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Program Activities (87%)', 'Administrative (8%)', 'Fundraising (5%)'],
+                    datasets: [{
+                        data: [87, 8, 5],
+                        backgroundColor: ['#27AE60', '#E74C3C', '#F39C12']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+        
+        function setupDownloadHandlers() {
+            window.downloadReport = function(year) {
+                // Simulate report download
+                if (window.AkshayaPatra && window.AkshayaPatra.showAlert) {
+                    window.AkshayaPatra.showAlert(`Annual Report ${year} download initiated. The PDF will be available shortly.`, 'success');
+                } else {
+                    alert(`Annual Report ${year} download initiated.`);
+                }
+            };
+            
+            window.downloadStudy = function(study) {
+                // Simulate study download
+                if (window.AkshayaPatra && window.AkshayaPatra.showAlert) {
+                    window.AkshayaPatra.showAlert(`Research study download initiated. The document will be available shortly.`, 'success');
+                } else {
+                    alert('Research study download initiated.');
+                }
+            };
+        }
+    </script>
+</body>
+</html>

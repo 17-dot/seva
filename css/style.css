@@ -1,0 +1,247 @@
+/* Custom CSS for Akshaya Patra Website */
+:root {
+    --primary-color: #FF6900;
+    --secondary-color: #e62d26;
+    --accent-color: #F39C12;
+    --text-dark: #2C3E50;
+    --text-light: #7F8C8D;
+    --bg-light: #F8F9FA;
+    --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff5f5;
+    color: #e62d26;
+}
+.text-sankat {
+    color: #e62d26;;
+}
+/* Buttons */
+.btn-primary,
+button,
+.btn {
+    background-color: #e62d26;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+button:hover,
+.btn:hover {
+    background-color: #ff3333;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    background-color: #e62d26;
+}
+
+.navbar.scrolled {
+    background: #fff5f5;
+    border: 1px solid #e62d26;
+    box-shadow: 0 2px 4px rgba(230, 45, 38, 0.05);
+}
+
+.nav-link:hover {
+    color: #e62d26;
+}
+.span {
+    color: #e62d26;
+}
+/* Hero Section */
+.hero-overlay {
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #b30000;
+}
+
+.hero-buttons {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Cards */
+.card {
+    background: #fff5f5;
+    border: 1px solid #b30000;
+    box-shadow: 0 2px 4px rgba(179, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b30000;
+}
+
+.active {
+    color: #ff3333;
+}
+
+/* Stories Carousel */
+.stories-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.story-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.story-slide.active {
+    display: block;
+}
+
+/* Updates Section */
+.updates-section {
+    padding: 5rem 0;
+}
+
+.updates-section .card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.updates-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.updates-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.updates-section .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.donation-amounts .btn {
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.donation-amounts .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.donation-amounts .btn.active {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 0 1rem;
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color) !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+ #blogsList {
+  max-height: 232px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.1rem; }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 { font-size: 2rem; }
+}
+
+/* .admin-dashboard, .admin-navbar {
+  display: none;
+} */
+
+/* i.fas.fa-arrow-up {
+    display: none !important;
+} */
+
+.admin-dashboard-container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.dashboard-header {
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+.form-card, .stats-section .card, .card {
+    border-radius: 10px;
+}
+.form-control, .form-select {
+    border-radius: 8px;
+}
+.card-body h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.bg-gradient-primary {
+    background: linear-gradient(45deg, #0062E6, #33AEFF);
+}
+.bg-gradient-success {
+    background: linear-gradient(45deg, #28a745, #5dd17c);
+}
+.bg-gradient-info {
+    background: linear-gradient(45deg, #17a2b8, #5edaf0);
+}
+.bg-gradient-warning {
+    background: linear-gradient(45deg, #ffc107, #ffd75c);
+}
+.card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.btn {
+    border-radius: 8px;
+}
+
+
