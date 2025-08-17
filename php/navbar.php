@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-5 me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="what-we-do.html">What We Do</a>
+                    <a class="nav-link" href="about.html">What We Do</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="news-stories.php">News & Stories</a>

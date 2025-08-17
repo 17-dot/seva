@@ -39,17 +39,8 @@ button,
     background-color: #ff3333;
 } */
 
-/* Navbar */
-.navbar {
-  padding: 1rem 0;
-  /* background-color: #e62d26; */
-}
 
-.navbar.scrolled {
-  background: #fff5f5;
-  border: 1px solid #e62d26;
-  box-shadow: 0 2px 4px rgba(230, 45, 38, 0.05);
-}
+
 
 /* .nav-link:hover {
     color: #e62d26;
