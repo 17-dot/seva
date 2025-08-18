@@ -4,6 +4,7 @@ require 'db_connect.php';
 
 // Query - fetch only required columns
 $sql = "SELECT id, title, heading ,author, category, image_url, content, publishDate 
+
         FROM blogs 
         ORDER BY publishDate DESC";
 

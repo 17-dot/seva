@@ -35,6 +35,7 @@ $conn->close();
         .blog-header {
             background: linear-gradient(to right, #0062E6, #33AEFF 90%);
             padding: 35px 0 32px 0;
+
             color: white;
             text-align: center;
         }
@@ -64,6 +65,8 @@ $conn->close();
             margin-bottom: 30px;
             box-shadow: 0 6px 40px 0 rgba(40,62,115,0.11);
         }
+
+
         .blog-category-badge {
             font-size: 1.03rem;
             font-weight: 600;
@@ -98,6 +101,7 @@ $conn->close();
             transform: scale(1.08);
             text-decoration: none;
         }
+
         .author-card {
             background: linear-gradient(95deg,#e8f1ff,#ffffff 85%);
             border-radius: 8px;
@@ -124,6 +128,7 @@ $conn->close();
         }
     </style>
     <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -163,6 +168,7 @@ $conn->close();
                     </a>
                 </div>
 
+
                 <!-- Author Card -->
                 <div class="author-card mb-3">
                     <span class="author-icon"><i class="fa-solid fa-user"></i></span>
@@ -172,7 +178,6 @@ $conn->close();
                         <span><?php echo date("F j, Y", strtotime($blog['publishDate'])); ?></span>
                     </span>
                 </div>
-
                 <!-- Blog Content -->
                 <div class="blog-content">
                     <?php echo $blog['content']; ?>
@@ -180,7 +185,6 @@ $conn->close();
             </div>
         </div>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

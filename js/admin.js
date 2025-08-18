@@ -1,5 +1,6 @@
 // Admin Panel JavaScript for Blog Management
 
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     initializeAdmin();
 // });
@@ -12,6 +13,7 @@
 // }
 
 document.addEventListener('DOMContentLoaded', function () {
+
     initializeAdmin();
 });
 
@@ -23,6 +25,7 @@ function initializeAdmin() {
     // Delay stats update slightly to ensure DOM ready and no overwrites
     setTimeout(updateDashboardStats, 500);
 }
+
 
 
 function checkAdminSession() {
@@ -142,6 +145,7 @@ function initializeBlogManagement() {
 
     if (blogForm) {
         // Remove any previously attached submit handlers before adding a new one
+
         // blogForm.onsubmit = function(e) {
         //     e.preventDefault();
 
@@ -201,7 +205,6 @@ function initializeBlogManagement() {
     })
     .catch(err => console.error(err));
 };
-
     }
 
     // Remove unnecessary publish button click event handler
@@ -214,7 +217,6 @@ function initializeBlogManagement() {
 }
 
 // Call this function on admin dashboard load
-
 
 
 function initializeRichTextEditor() {
@@ -701,7 +703,6 @@ function updateDashboardStats() {
             console.error('Dashboard load error:', err);
         });
 }
-
 
 // Export functions for global access
 window.AdminPanel = {

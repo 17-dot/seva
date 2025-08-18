@@ -41,6 +41,7 @@ function displayBlogs(blogs) {
                 <img src="${blog.imageUrl}" class="card-img-top" alt="${blog.title}" 
                      style="height: 250px; object-fit: cover;"
                      onerror="this.onerror=null;this.src='images/default-${blog.category}.jpeg';">
+
                 <div class="card-body d-flex flex-column">
                     <div class="blog-meta mb-2">
                         <small class="text-muted">

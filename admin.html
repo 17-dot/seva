@@ -145,6 +145,7 @@
                             <div class="col-lg-8 col-md-12">
                                 <label for="blogTitle" class="form-label">Blog Title *</label>
                                 <input type="text" class="form-control" placeholder="Blog Title" id="blogTitle" required>
+
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <label for="blogCategory" class="form-label">Category</label>
@@ -170,6 +171,7 @@
                                 <small class="text-muted">Leave empty to use default category image</small> -->
                                 <input type="text" class="form-control" id="blogImage" name="image_url" placeholder="images/banner1.jpg">
                                 <small class="text-muted">Leave empty to use default category image</small>
+
 
                             </div>
                             <div class="col-12">
@@ -218,9 +220,11 @@
             <h5 class="fw-bold mb-3">Quick Actions</h5>
             <div class="row">
                 <div class="col-md-12 col-sm-6 mb-3">
+
                     <button class="btn btn-outline-info w-100" onclick="showStatistics()">
                         <i class="fas fa-chart-bar me-1"></i>View Statistics
                     </button>
+
                 </div>
                 <div class="col-md-12 col-sm-6 mb-3">
                     <button class="btn btn-outline-success w-100" onclick="exportBlogs()">
@@ -237,6 +241,7 @@
                     <a href="news-stories.php" class="btn btn-outline-primary w-100">
                         <i class="fas fa-eye me-1"></i>View News
                     </a>
+
                 </div>
             </div>
         </div>
@@ -384,6 +389,7 @@
   showAlert('Export started. Check your downloads.', 'success');
 }
 
+
         function backupBlogs() {
             const blogs = getBlogsFromStorage();
             const backupKey = `akshaya_patra_blogs_backup_${Date.now()}`;
@@ -391,7 +397,6 @@
             
             showAlert('Blogs backed up successfully!', 'success');
         }
-        
 function showStatistics() {
   fetch('php/get_blog_statistics.php')
     .then(res => res.json())

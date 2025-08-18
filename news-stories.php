@@ -42,7 +42,6 @@
   }
 </style>
 
-
 </head>
 <body>
     <!-- Navigation -->
@@ -67,7 +66,9 @@
                         <a class="nav-link active" href="news-stories.php">News & Stories</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link" href="how-tohelp.html">How To Help</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="get-involved.html">Get Involved</a>
@@ -77,11 +78,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blogs.php">Blogs</a>
+
                     </li>
                 </ul>
                 <div class="d-flex">
                     <a href="#donate" class="btn btn-primary me-2 ">Donate Now</a>
                     <!-- <a href="admin.html" class="btn btn-outline-secondary">Admin</a> -->
+
                 </div>
             </div>
         </div>
@@ -212,6 +215,7 @@
 <section class="section-padding">
     <div class="container mb-4">
         <div class="text-center mb-5 mt-3">
+
             <h2 class="fw-bold">Latest News</h2>
             <p class="lead">Stay updated with our recent achievements and milestones</p>
         </div>
@@ -292,6 +296,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-4">
                     <a href="how-tohelp.html" class="btn btn-light btn-lg me-3 mb-2">Support Our Mission</a>
+
                     <a href="get-involved.html" class="btn btn-outline-light btn-lg mb-2">Share Your Story</a>
                 </div>
             </div>
@@ -328,6 +333,7 @@
                     <h6 class="fw-bold mb-3">Get Involved</h6>
                     <ul class="list-unstyled">
                         <li><a href="how-tohelp.html" class="text-light text-decoration-none">How To Help</a></li>
+
                         <li><a href="get-involved.html" class="text-light text-decoration-none">Volunteer</a></li>
                         <li><a href="index.html#donate" class="text-light text-decoration-none">Donate</a></li>
                         <li><a href="get-involved.html" class="text-light text-decoration-none">Partner With Us</a></li>

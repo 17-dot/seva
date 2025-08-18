@@ -14,6 +14,7 @@ if ($result && $result->num_rows > 0) {
 
     while ($blog = $result->fetch_assoc()) {
         // Escape data
+
         $title = htmlspecialchars($blog['title']);
         $category = htmlspecialchars($blog['category']);
         $author = htmlspecialchars($blog['author']);
@@ -46,13 +47,16 @@ if ($result && $result->num_rows > 0) {
                 <img src="'.$image.'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="'.$title.'" 
                      onerror="this.onerror=null;this.src=\'https://via.placeholder.com/400x250?text=No+Image\';">
                 <div class="card-body d-flex flex-column">
+
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <span class="badge bg-'.$badgeClass.'">'.ucfirst($category).'</span>
                         <small class="text-muted">'.$date.'</small>
                     </div>
                     <h5 class="card-title fw-bold">'.$title.'</h5>
+
                     <p class="card-text flex-grow-1">'.$excerpt.'</p>
                     <a href="/seva-main/php/blog-details.php?id='.$blog['id'].'" class="btn btn-outline-primary mt-auto">Read More</a>
+
                 </div>
             </div>
         </div>';
@@ -71,6 +75,7 @@ if ($result && $result->num_rows > 0) {
         <a href="/seva-main/php/view_all_news.php" class="btn btn-primary btn-lg">View All</a>
     </div>';
 }
+
 
 $conn->close();
 ?>
