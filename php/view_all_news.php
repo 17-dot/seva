@@ -30,8 +30,8 @@ $badgeColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 
             justify-content: center;
             font-size: 20px;
             background-color: #fff;
-            border: 2px solid #0d6efd;
-            color: #0d6efd;
+            border: 2px solid #e60000ff;
+            color: #e60000ff;
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
             transition: all 0.2s ease-in-out;
         }
@@ -61,14 +61,14 @@ $badgeColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 
     justify-content: center;
     font-size: 20px;
     background-color: #fff;
-    border: 2px solid #0d6efd;
-    color: #0d6efd;
+    border: 2px solid #e60000ff;
+    color: #e60000ff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
     text-decoration: none; /* 🔹 removes underline */
 }
 .btn-back-icon:hover {
-    background-color: #0d6efd;
+    background-color: #e60000ff;
     color: #fff;
     /* transform: scale(1.1); */
     text-decoration: none; /* 🔹 prevents underline on hover */
@@ -127,7 +127,7 @@ $badgeColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 
                                     </div>
                                     <h5 class="card-title fw-bold">'.$title.'</h5>
                                     <p class="card-text">'.$excerpt.'</p>
-                                    <a href="/seva-main/php/blog-details.php?id='.$blog['id'].'" class="btn btn-outline-primary mt-auto">Read More</a>
+                                    <a href="/seva-main/php/blog-details.php?id='.$blog['id'].'" class="btn btn-outline-danger mt-auto">Read More</a>
                                 </div>
                             </div>
                         </div>';

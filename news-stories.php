@@ -45,7 +45,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
          <a class="navbar-brand" href="index.html">
     <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
@@ -90,12 +90,58 @@
                 </div>
             </div>
         </div>
+    </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+         <a class="navbar-brand" href="index.html">
+    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
+    <span class="fw-bold text-sankat" style="color: #e62d26; margin-top: 5px; display: inline-block;">Sankat Saathi</span>
+</a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-5 me-auto">
+                    <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="get-involved.html">Get Involved</a>
+                    </li>
+                 
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="how-tohelp.html">How To Help</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="impact-reports.html">Impact Reports</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="news-stories.php">News & Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.php">Blogs</a>
+
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="#donate" class="btn  me-2 " style="background-color: #e62d26; color:white;">Donate Now</a>
+                    <a href="admin.html" class="btn  admin-btn">Admin</a>
+                    <style>.admin-btn {border: 1px solid black;color: black;transition: all 0.3s ease;}.admin-btn:hover {background-color: rgb(85, 84, 84);color: white;}</style>
+
+                </div>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
 <section class="hero-section" style="
     height: 60vh;
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+    background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;">
 <div class="hero-overlay">
@@ -108,8 +154,7 @@
     </div>
   </div>
 </div>
-
-    </section>
+</section>
 
     <!-- Latest News Section -->
     <!-- <section class="section-padding">
@@ -251,7 +296,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"While we at NCML had heard about Akshaya Patra via various films, news articles, and images about the fabulous work it does tirelessly every day, visiting the schools and kitchens was really an eye-opener and a highly recommended experience for everyone."</p>
                         </div>
                         <div class="testimonial-author">
@@ -264,7 +309,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"Hunger is not a natural disaster but man-made one to a large extent. Hence, I feel, it is our duty to make India hunger-free. It was pleasant to know about the implementation of the Mid-Day Meal Programme by The Sankat Saathi Seva Foundation."</p>
                         </div>
                         <div class="testimonial-author">
@@ -277,7 +322,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"The Sankat Saathi Seva Foundation's implementation of the Mid-Day Meal Programme is a great initiative to address two Sustainable Development Goals – Zero Hunger and Quality Education with nutritious and quality food."</p>
                         </div>
                         <div class="testimonial-author">
@@ -291,15 +336,15 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-primary text-white  ">
+    <section class="section-padding bg-danger text-white ">
         <div class="container text-center mt-3">
             <h2 class="fw-bold mb-4 mt-3">Be Part of Our Story</h2>
             <p class="lead mb-4">Help us create more success stories and transform more lives through nutrition and education</p>
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-4">
-                    <a href="how-tohelp.html" class="btn btn-light btn-lg me-3 mb-2">Support Our Mission</a>
+                    <a href="how-tohelp.html" class="btn btn-dark btn-lg me-3 mb-2">Support Our Mission</a>
 
-                    <a href="get-involved.html" class="btn btn-outline-light btn-lg mb-2">Share Your Story</a>
+                    <a href="get-involved.html" class="btn btn-dark btn-lg me-3 mb-2">Share Your Story</a>
                 </div>
             </div>
         </div>

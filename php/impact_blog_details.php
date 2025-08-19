@@ -50,7 +50,7 @@ $content = $blog['content'];
         }
 
         .blog-header {
-            background: linear-gradient(to right, #0062E6, #33AEFF 90%);
+            background: linear-gradient(to right, #fc450dee, #df3d3dff 90%);
             color: white;
             padding: 2.5rem 1rem;
             text-align: center;
@@ -99,7 +99,7 @@ $content = $blog['content'];
             align-self: flex-start;
             font-weight: 600;
             font-size: 1rem;
-            color: #0062e6;
+            color: #e60000ff;
             background: #e9f2ff;
             padding: 0.5rem 1rem;
             border-radius: 25px;
@@ -110,7 +110,7 @@ $content = $blog['content'];
         }
 
         .content-area .image-section .back-link:hover {
-            background-color: #0062e6;
+            background-color: #e60000ff;
             color: white;
             text-decoration: none;
         }
@@ -134,7 +134,7 @@ $content = $blog['content'];
         }
 
         .info-bar .category-badge {
-            background: linear-gradient(90deg, #12c2e9 0%, #0062e6 100%);
+            background: linear-gradient(90deg, #fc450dee, #df3d3dff 100%);
             color: white;
             font-weight: 600;
             font-size: 1.1rem;
@@ -154,7 +154,7 @@ $content = $blog['content'];
         }
 
         .info-bar .author-date i {
-            color: #2386e6;
+            color: #e60000ff;
         }
 
         .blog-content {

@@ -47,14 +47,14 @@ if (!$result) {
             justify-content: center;
             font-size: 20px;
             background-color: #fff;
-            border: 2px solid #0d6efd;
-            color: #0d6efd;
+            border: 2px solid #e60000ff;
+            color: #e60000ff;
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
             transition: all 0.2s ease-in-out;
             text-decoration: none;
         }
         .btn-back-icon:hover {
-            background-color: #0d6efd;
+            background-color: #e60000ff;
             color: #fff;
             transform: scale(1.1);
             text-decoration: none;
@@ -120,7 +120,7 @@ if (!$result) {
                                         <span class="badge bg-danger mb-2 align-self-start">Impact Story</span>
                                         <h4><?= $heading ?></h4>
                                         <p class="flex-grow-1"><?= $excerpt ?></p>
-                                        <a href="impact_blog_details.php?id=<?= $blog['id'] ?>" class="btn btn-outline-primary align-self-start mt-auto">Read Full Story</a>
+                                        <a href="impact_blog_details.php?id=<?= $blog['id'] ?>" class="btn btn-outline-danger align-self-start mt-auto">Read Full Story</a>
                                     </div>
                                 </div>
                             </div>

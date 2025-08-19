@@ -33,7 +33,7 @@ $conn->close();
             font-family: 'Poppins', sans-serif;
         }
         .blog-header {
-            background: linear-gradient(to right, #0062E6, #33AEFF 90%);
+            background: linear-gradient(to right, #fc450dee, #df3d3dff 90%);
             padding: 35px 0 32px 0;
 
             color: white;
@@ -73,7 +73,7 @@ $conn->close();
             padding: 8px 22px !important;
             border-radius: 28px !important;
             box-shadow: 0 1px 4px 0 rgba(0,0,0,0.07);
-            background: linear-gradient(to right, #12c2e9 55%, #0062E6 100%);
+            background: linear-gradient(to right, #fc450dee, #df3d3dff 100%);
             color: #fff;
             letter-spacing: 0.5px;
             border: none;
@@ -89,21 +89,21 @@ $conn->close();
             justify-content: center;
             font-size: 14px;
             background-color: #fff;
-            border: 2px solid #0d6efd;
-            color: #0d6efd;
+            border: 2px solid #e60000ff;
+            color: #e60000ff;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             transition: all 0.2s ease-in-out;
             text-decoration: none;
         }
         .btn-back-icon-sm:hover {
-            background-color: #0d6efd;
+            background-color: #e60000ff;
             color: #fff;
             transform: scale(1.08);
             text-decoration: none;
         }
 
         .author-card {
-            background: linear-gradient(95deg,#e8f1ff,#ffffff 85%);
+            background: linear-gradient(95deg, #e8f1ff,#ffffff 85%);
             border-radius: 8px;
             padding: 13px 23px 11px 23px;
             display: flex;
@@ -113,7 +113,7 @@ $conn->close();
         }
         .author-icon {
             font-size: 1.3rem;
-            color: #2386e6;
+            color: #e60000ff;
             margin-right: 11px;
         }
         .author-name-date {

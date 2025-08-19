@@ -19,113 +19,125 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+        <style>
+  .hero-overlay {
+    height: 100vh; /* full viewport height */
+    background: url('YOUR_BACKGROUND_IMAGE_URL') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    /* align-items: center;     */
+    justify-content: center;  /* horizontal centering */
+    text-align: center;
+    color: #fff; /* white text */
+    font-family: 'Poppins', sans-serif; /* attractive, clean font */
+    padding-top: 100px; /* same as above */
+  }
+  .hero-overlay h1 {
+    font-weight: 900; /* extra bold */
+    font-size: 4rem;  /* larger */
+  }
+  .hero-overlay p.lead {
+    font-weight: 600;
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+</style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top" aria-label="Main navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="sankatsaathi.png" alt="Sankat Saathi Seva Foundation Logo" class="me-2" width="40" height="40">
-                <span class="fw-bold text-primary">Sankat Saathi</span>
-            </a>
+         <a class="navbar-brand" href="index.html">
+    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
+    <span class="fw-bold text-sankat" style="color: #e62d26; margin-top: 5px; display: inline-block;">Sankat Saathi</span>
+</a>
+
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="who-we-are.html">Who We Are</a>
+                <ul class="navbar-nav ms-5 me-auto">
+                    <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="what-we-do.html">What We Do</a>
+                        <li class="nav-item">
+                            <a class="nav-link " href="get-involved.html">Get Involved</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news-stories.html">News & Stories</a>
-                    </li>
-                    <li class="nav-item">
+                 
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="how-tohelp.html">How To Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="get-involved.html">Get Involved</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="impact-reports.html">Impact Reports</a>
                     </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="news-stories.php">News & Stories</a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogs.html">Blogs</a>
+                        <a class="nav-link" href="blogs.php">Blogs</a>
+
                     </li>
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="index.html#donate" class="btn btn-primary me-2">Donate Now</a>
-                    <!-- <a href="admin.html" class="btn btn-outline-secondary">Admin</a> -->
+                    <a href="#donate" class="btn  me-2 " style="background-color: #e62d26; color:white;">Donate Now</a>
+                    <a href="admin.html" class="btn  admin-btn">Admin</a>
+                    <style>.admin-btn {border: 1px solid black;color: black;transition: all 0.3s ease;}.admin-btn:hover {background-color: rgb(85, 84, 84);color: white;}</style>
+
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
-                <span class="fw-bold text-sankat" style="color: #e62d26;">Sankat Saathi</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="what-we-do.html">What We Do</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news-stories.php">News & Stories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="how-tohelp.html">How To Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="get-involved.html">Get Involved</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="impact-reports.html">Impact Reports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blogs.html">Blogs</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="#donate" class="btn btn-primary me-2 ">Donate Now</a>
-                    <!-- <a href="admin.html" class="btn btn-outline-secondary">Admin</a> -->
+    <!-- Hero Section -->
+    <!-- <section class="hero-section" style="height: 60vh; background-image: url('banner.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold text-white mb-4">Our Vision & Mission</h1>
+                        <p class="lead text-white">Guiding principles that drive our work every day</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
-                    <img src="https://images.unsplash.com/photo-1617871567290-7e869f0b8161?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Children enjoying nutritious meals provided by Akshaya Patra" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> -->
+
+        <section class="hero-section" style="
+    height: 60vh;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;">
+<div class="hero-overlay">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1>Our Vision & Mission</h1>
+        <p class="lead">Guiding principles that drive our work every day</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
 
     <!-- Vision and Mission -->
     <section class="section-padding bg-light mt-4 py-5">
         <div class="container">
-            <div class="text-center mb-5">
+            <!-- <div class="text-center mb-5">
                 <h2 class="fw-bold">Our Vision & Mission</h2>
                 <p class="lead">Guiding principles that drive our work every day</p>
-            </div>
-            
+            </div> -->            
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-5">
-                            <i class="fas fa-eye fa-3x text-primary mb-4" aria-hidden="true"></i>
+                            <i class="fas fa-eye fa-3x text-danger mb-4" aria-hidden="true"></i>
                             <h3 class="fw-bold mb-4">Our Vision</h3>
                             <p class="lead">"No child in India shall be deprived of education because of hunger"</p>
                             <p>We envision a world where every child has access to education without the barrier of hunger. Our vision drives us to create sustainable solutions that ensure nutritional security for children across India.</p>
@@ -136,7 +148,7 @@
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center p-5">
-                            <i class="fas fa-bullseye fa-3x text-primary mb-4" aria-hidden="true"></i>
+                            <i class="fas fa-bullseye fa-3x text-danger mb-4" aria-hidden="true"></i>
                             <h3 class="fw-bold mb-4">Our Mission</h3>
                             <p class="lead">"To feed 3 million children every day by 2025"</p>
                             <p>We are committed to scaling our operations to reach more children in need. Our mission encompasses not just feeding children, but ensuring they receive nutritious, wholesome meals that support their growth and learning.</p>
@@ -167,7 +179,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-hands-helping fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-hands-helping fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Service</h5>
                             <p>Dedicated service to children and communities in need, ensuring every action contributes to their well-being and development.</p>
                         </div>
@@ -177,7 +189,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-shield-alt fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-shield-alt fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Integrity</h5>
                             <p>Maintaining the highest standards of honesty, transparency, and ethical conduct in all our operations and relationships.</p>
                         </div>
@@ -187,7 +199,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-lightbulb fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-lightbulb fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Innovation</h5>
                             <p>Embracing creative solutions and technology to enhance our impact and reach more children effectively.</p>
                         </div>
@@ -197,7 +209,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-users fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-users fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Collaboration</h5>
                             <p>Working together with government, partners, and communities to create sustainable change and maximize impact.</p>
                         </div>
@@ -207,7 +219,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-leaf fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-leaf fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Sustainability</h5>
                             <p>Implementing environmentally responsible practices and creating long-term solutions for food security.</p>
                         </div>
@@ -217,7 +229,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-award fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-award fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">Excellence</h5>
                             <p>Striving for the highest quality in everything we do, from food preparation to program delivery and impact measurement.</p>
                         </div>
@@ -228,7 +240,7 @@
     </section>
 
     <!-- Impact Statistics -->
-    <section class="section-padding bg-primary text-white py-5">
+    <section class="section-padding bg-danger text-white py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Our Impact by Numbers</h2>
@@ -308,7 +320,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm text-center h-100">
                         <div class="card-body p-4">
-                            <i class="fas fa-globe fa-3x text-primary mb-3" aria-hidden="true"></i>
+                            <i class="fas fa-globe fa-3x text-danger mb-3" aria-hidden="true"></i>
                             <h5 class="fw-bold">UN Recognition</h5>
                             <p class="text-muted">2024</p>
                             <p>4 Billion Meals milestone commemorated at the UN Headquarters, New York.</p>
@@ -337,8 +349,8 @@
             <p class="lead mb-4">Be part of our journey to eliminate classroom hunger and transform lives through education</p>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <a href="how-tohelp.html" class="btn btn-primary btn-lg me-3 mb-2">Help Us Today</a>
-                    <a href="get-involved.html" class="btn btn-outline-primary btn-lg mb-2">Get Involved</a>
+                    <a href="how-tohelp.html" class="btn btn-danger btn-lg me-3 mb-2">Help Us Today</a>
+                    <a href="get-involved.html" class="btn btn-danger btn-lg mb-2">Get Involved</a>
                 </div>
             </div>
         </div>
@@ -433,7 +445,7 @@
 
         // Trigger animation when section is in view
         window.addEventListener('load', () => {
-            const statsSection = document.querySelector('.section-padding.bg-primary');
+            const statsSection = document.querySelector('.section-padding.bg-danger');
             const observer = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting) {
                     animateStats();

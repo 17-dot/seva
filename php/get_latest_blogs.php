@@ -55,7 +55,7 @@ if ($result && $result->num_rows > 0) {
                     <h5 class="card-title fw-bold">'.$title.'</h5>
 
                     <p class="card-text flex-grow-1">'.$excerpt.'</p>
-                    <a href="/seva-main/php/blog-details.php?id='.$blog['id'].'" class="btn btn-outline-primary mt-auto">Read More</a>
+                    <a href="/seva-main/php/blog-details.php?id='.$blog['id'].'" class="btn btn-outline-danger mt-auto">Read More</a>
 
                 </div>
             </div>
@@ -72,7 +72,7 @@ if ($result && $result->num_rows > 0) {
 if ($result && $result->num_rows > 0) {
     echo '
     <div class="text-center mt-4">
-        <a href="/seva-main/php/view_all_news.php" class="btn btn-primary btn-lg">View All</a>
+        <a href="/seva-main/php/view_all_news.php" class="btn btn-danger btn-lg">View All</a>
     </div>';
 }
 

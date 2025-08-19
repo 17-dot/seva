@@ -75,7 +75,7 @@ if (!$result) {
                                     <h4><?= $heading ?></h4>
                                     <p class="flex-grow-1"><?= $excerpt ?></p>
                                     <a href="php/blog-details.php?id=<?= $blog['id'] ?>" 
-                                       class="btn btn-outline-primary align-self-start">
+                                       class="btn btn-outline-danger align-self-start">
                                         Read Full Story
                                     </a>
                                 </div>
@@ -88,7 +88,7 @@ if (!$result) {
 
         <!-- View All Button -->
         <div class="text-center mb-5">
-            <a href="php/show_all_blogs.php" class="btn btn-primary btn-lg mb-3">View All</a>
+            <a href="php/show_all_blogs.php" class="btn btn-danger btn-lg mb-3">View All</a>
         </div>
         
     </div>

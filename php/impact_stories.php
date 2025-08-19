@@ -37,11 +37,11 @@ if (!$result) {
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body h-100 d-flex flex-column">
-                                    <span class="badge bg-primary align-self-start mb-2">Impact Story</span>
+                                    <span class="badge bg-danger align-self-start mb-2">Impact Story</span>
                                     <h4><?= $heading ?></h4>
                                     <p class="flex-grow-1"><?= $excerpt ?></p>
                                     <!-- <a href="<?= $readMoreLink ?>" class="btn btn-outline-primary align-self-start">Read Full Story</a> -->
-                                    <a href="php/impact_blog_details.php?id=<?= $blog['id'] ?>" class="btn btn-outline-primary align-self-start">Read Full Story</a>
+                                    <a href="php/impact_blog_details.php?id=<?= $blog['id'] ?>" class="btn btn-outline-danger align-self-start">Read Full Story</a>
 
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ if (!$result) {
 
         </div>
         <div class="text-center mb-5">
-            <a href="php/view_all_impact.php" class="btn btn-primary btn-lg mb-3">View All</a>
+            <a href="php/view_all_impact.php" class="btn btn-danger btn-lg mb-3">View All</a>
         </div>
     </div>
 </section>
