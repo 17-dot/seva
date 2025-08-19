@@ -43,6 +43,115 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+  
+.navbar-nav .nav-item {
+      margin-right: 12px;
+    }
+    .navbar-nav .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    /* Dropdown hidden by default */
+    .navbar-nav .nav-item .dropdown {
+      display: none;
+      position: absolute;
+      background: #fff;
+      padding: 10px 0;
+      margin-top: 5px;
+      list-style: none;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      z-index: 1000;
+    }
+
+    /* Show dropdown on hover */
+    .navbar-nav .nav-item:hover > .dropdown {
+      display: block;
+    }
+
+    /* Dropdown items */
+    .navbar-nav .dropdown li {
+      padding: 0;
+    }
+
+    .navbar-nav .dropdown li a {
+      display: block;
+      padding: 10px 15px;
+      color: #000;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    /* Hover effect on dropdown items */
+    .navbar-nav .dropdown li a:hover {
+      background: #f5f5f5;
+      color: #e62d26;
+    }
+
+    /* Navbar underline effect */
+    .navbar-nav .nav-link {
+      position: relative;
+      display: inline-block;
+      color: #000;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background-color: #e62d26;
+      transition: width 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    /* Hover underline */
+    .navbar-nav .nav-link:hover::after {
+      width: 90%;
+    }
+
+    /* Keep underline on active/current page */
+    .navbar-nav .nav-link.active::after {
+      width: 95%;
+    }
+
+    /* Active & hover text color */
+    .nav-link:hover,
+    .nav-link.active {
+      color: #e62d26 !important;
+    }
+
+    /* Another version of nav-link (custom) */
+    .navbar-nav .nav-link1 {
+      position: relative;
+      display: inline-block;
+      color: #000;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background-color: #e62d26;
+      transition: width 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    .nav-link1:hover,
+    .nav-link1.active {
+      color: #e62d26 !important;
+    }
 </style>
 </head>
 <body>
