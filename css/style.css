@@ -1,3 +1,12 @@
+.button-color{
+  color: #e62d26;
+}
+
+.background-color {
+  background: linear-gradient(135deg, #b31217, #e62d26, #ff5f6d);
+}
+
+
 .navbar-nav .nav-item {
   margin-right: 12px;
 }
@@ -70,15 +79,7 @@ html {
 }
 
 
-.btn-primary,
-button,
-.btn {
-  /* background-color: #e62d26; */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+
 
 
 .nav-link:hover,

@@ -1,6 +1,19 @@
 // Admin Panel JavaScript for Blog Management
 
-document.addEventListener('DOMContentLoaded', function() {
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     initializeAdmin();
+// });
+
+// function initializeAdmin() {
+//     checkAdminSession();
+//     initializeLoginForm();
+//     initializeBlogManagement();
+//     updateDashboardStats(); 
+// }
+
+document.addEventListener('DOMContentLoaded', function () {
+
     initializeAdmin();
 });
 
@@ -8,7 +21,12 @@ function initializeAdmin() {
     checkAdminSession();
     initializeLoginForm();
     initializeBlogManagement();
+
+    // Delay stats update slightly to ensure DOM ready and no overwrites
+    setTimeout(updateDashboardStats, 500);
 }
+
+
 
 function checkAdminSession() {
     fetch("php/check_admin.php")
@@ -127,36 +145,66 @@ function initializeBlogManagement() {
 
     if (blogForm) {
         // Remove any previously attached submit handlers before adding a new one
+
+        // blogForm.onsubmit = function(e) {
+        //     e.preventDefault();
+
+        //     const blogData = {
+        //         title: document.getElementById("blogTitle").value,
+        //         category: document.getElementById("blogCategory").value,
+        //         author: document.getElementById("blogAuthor").value,
+        //         image_url: document.getElementById("blogImage").value,
+        //         content: document.getElementById("blogContent").innerHTML
+        //     };
+
+        //     fetch("php/save_blog.php", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify(blogData)
+        //     })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         if (data.status === "success") {
+        //             alert("Blog published!");
+        //             blogForm.reset();
+        //             if (typeof loadBlogs === 'function') {
+        //                 loadBlogs();
+        //             }
+        //         } else {
+        //             alert("Error: " + data.message);
+        //         }
+        //     })
+        //     .catch(err => console.error(err));
+        // };
+
         blogForm.onsubmit = function(e) {
-            e.preventDefault();
-
-            const blogData = {
-                title: document.getElementById("blogTitle").value,
-                category: document.getElementById("blogCategory").value,
-                author: document.getElementById("blogAuthor").value,
-                image_url: document.getElementById("blogImage").value,
-                content: document.getElementById("blogContent").innerHTML
-            };
-
-            fetch("php/save_blog.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(blogData)
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === "success") {
-                    alert("Blog published!");
-                    blogForm.reset();
-                    if (typeof loadBlogs === 'function') {
-                        loadBlogs();
-                    }
-                } else {
-                    alert("Error: " + data.message);
-                }
-            })
-            .catch(err => console.error(err));
-        };
+    e.preventDefault();
+    const blogData = {
+        title: document.getElementById("blogTitle").value,
+        category: document.getElementById("blogCategory").value,
+        author: document.getElementById("blogAuthor").value,
+        image_url: document.getElementById("blogImage").value,  // this should be 'images/banner1.jpg'
+        content: document.getElementById("blogContent").innerHTML
+    };
+    fetch("php/save_blog.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(blogData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success") {
+            alert("Blog published!");
+            blogForm.reset();
+            if (typeof loadBlogs === 'function') {
+                loadBlogs();
+            }
+        } else {
+            alert("Error: " + data.message);
+        }
+    })
+    .catch(err => console.error(err));
+};
     }
 
     // Remove unnecessary publish button click event handler
@@ -167,6 +215,8 @@ function initializeBlogManagement() {
     
     initializeRichTextEditor();
 }
+
+// Call this function on admin dashboard load
 
 
 function initializeRichTextEditor() {
@@ -627,6 +677,33 @@ function showAlert(message, type = 'success') {
     }
 }
 
+function updateDashboardStats() {
+    fetch('php/get_dashboard_stats.php')
+        .then(res => res.json())
+        .then(data => {
+            console.log('Dashboard data fetched:', data);
+            if(document.getElementById('totalBlogs')) {
+                document.getElementById('totalBlogs').textContent = data.total_blogs ?? 0;
+                console.log('Total Blogs updated to:', data.total_blogs);
+            }
+            if(document.getElementById('todayBlogs')) {
+                document.getElementById('todayBlogs').textContent = data.published_today ?? 0;
+                console.log('Today Blogs updated to:', data.published_today);
+            }
+            if(document.getElementById('impactStories')) {
+                document.getElementById('impactStories').textContent = data.impact_stories ?? 0;
+                console.log('Impact Stories updated to:', data.impact_stories);
+            }
+            if(document.getElementById('newsArticles')) {
+                document.getElementById('newsArticles').textContent = data.news_articles ?? 0;
+                console.log('News Articles updated to:', data.news_articles);
+            }
+        })
+        .catch(err => {
+            console.error('Dashboard load error:', err);
+        });
+}
+
 // Export functions for global access
 window.AdminPanel = {
     logout,
@@ -641,6 +718,7 @@ document.addEventListener('DOMContentLoaded', function() {
     checkAdminSession();
     initializeLoginForm();
     initializeBlogManagement();
+    updateDashboardStats();
 });
 
 

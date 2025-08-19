@@ -1,31 +1,3 @@
-<!-- <?php
-require 'db_connect.php';
-$id = intval($_GET['id']);
-$sql = "SELECT * FROM blogs WHERE id = $id";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    $blog = $result->fetch_assoc();
-} else {
-    die("Blog not found.");
-}
-$conn->close();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title><?php echo htmlspecialchars($blog['title']); ?></title>
-</head>
-<body>
-    <h1><?php echo htmlspecialchars($blog['title']); ?></h1>
-    <p><strong>By:</strong> <?php echo htmlspecialchars($blog['author']); ?> | <strong>Date:</strong> <?php echo date("F j, Y", strtotime($blog['publishDate'])); ?></p>
-    <?php if (!empty($blog['image_url'])): ?>
-        <img src="<?php echo $blog['image_url']; ?>" style="max-width:100%;">
-    <?php endif; ?>
-    <div><?php echo $blog['content']; ?></div>
-</body>
-</html> -->
-
-
 <?php
 require 'db_connect.php';
 
@@ -61,8 +33,9 @@ $conn->close();
             font-family: 'Poppins', sans-serif;
         }
         .blog-header {
-            background: linear-gradient(to right, #0062E6, #33AEFF 90%);
-            padding: 48px 0 32px 0;
+            background: linear-gradient(to right, #fc450dee, #df3d3dff 90%);
+            padding: 35px 0 32px 0;
+
             color: white;
             text-align: center;
         }
@@ -92,24 +65,45 @@ $conn->close();
             margin-bottom: 30px;
             box-shadow: 0 6px 40px 0 rgba(40,62,115,0.11);
         }
-        @media (max-width: 991px) {
-            .blog-main-card {padding: 16px;}
-        }
+
+
         .blog-category-badge {
             font-size: 1.03rem;
             font-weight: 600;
             padding: 8px 22px !important;
             border-radius: 28px !important;
             box-shadow: 0 1px 4px 0 rgba(0,0,0,0.07);
-            margin-bottom: 22px;
-            background: linear-gradient(to right, #12c2e9 55%, #0062E6 100%);
+            background: linear-gradient(to right, #fc450dee, #df3d3dff 100%);
             color: #fff;
             letter-spacing: 0.5px;
             border: none;
             display: inline-block;
         }
+        /* Small circular back icon */
+        .btn-back-icon-sm {
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            background-color: #fff;
+            border: 2px solid #e60000ff;
+            color: #e60000ff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+        }
+        .btn-back-icon-sm:hover {
+            background-color: #e60000ff;
+            color: #fff;
+            transform: scale(1.08);
+            text-decoration: none;
+        }
+
         .author-card {
-            background: linear-gradient(95deg,#e8f1ff,#ffffff 85%);
+            background: linear-gradient(95deg, #e8f1ff,#ffffff 85%);
             border-radius: 8px;
             padding: 13px 23px 11px 23px;
             display: flex;
@@ -119,7 +113,7 @@ $conn->close();
         }
         .author-icon {
             font-size: 1.3rem;
-            color: #2386e6;
+            color: #e60000ff;
             margin-right: 11px;
         }
         .author-name-date {
@@ -132,29 +126,9 @@ $conn->close();
             margin-top: 7px;
             color: #2c2e35;
         }
-        .back-link {
-            display: inline-block;
-            margin-top: 22px;
-            text-decoration: none;
-            color: #0062E6;
-            background: #e8f1ff;
-            font-weight: 600;
-            padding: 9px 19px;
-            border-radius: 23px;
-            transition: background 0.15s, color 0.14s;
-            box-shadow: 0 2px 12px rgba(79,173,251,0.09);
-        }
-        .back-link:hover {
-            background: #0062E6;
-            color: #fff;
-            text-decoration: none;
-        }
-        @media (max-width: 767px) {
-            .blog-main-card {padding:10px;}
-            .author-card {padding: 9px 11px;}
-        }
     </style>
-    <!-- Font Awesome for user icon -->
+    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -169,26 +143,32 @@ $conn->close();
 
     <div class="container my-5">
         <div class="row gx-5 gy-5">
-            <!-- Left: Image + Back link -->
+            <!-- Left: Image -->
             <div class="col-lg-5 col-md-6">
-                <?php if (!empty($blog['image_url'])): ?>
-                    <img src="<?php echo htmlspecialchars($blog['image_url']); ?>" class="blog-image" alt="<?php echo htmlspecialchars($blog['title']); ?>">
-                <?php else: ?>
-                    <img src="https://via.placeholder.com/500x360.png?text=No+Image" class="blog-image" alt="No Image">
-                <?php endif; ?>
-                <a href="/Sankat-Saathi/news-stories.php" class="back-link mb-4">
-                    <i class="fa fa-arrow-left me-2"></i>Back to Latest News
-                </a>
+                <?php
+                $image_url = !empty($blog['image_url']) ? htmlspecialchars($blog['image_url']) : "images/default-impact-stories.jpeg";
+                $title = htmlspecialchars($blog['title']);
+                ?>
+                <img src="../<?php echo $image_url; ?>"
+                     class="blog-image"
+                     alt="<?php echo $title; ?>"
+                     onerror="this.onerror=null;this.src='../images/default-news.jpg';">
             </div>
 
-            <!-- Right: Category, Author, Content -->
+            <!-- Right: Category + Back icon, Author, Content -->
             <div class="col-lg-7 col-md-6">
-                <!-- Category badge -->
-                <div>
+
+                <!-- Category badge row with back icon -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
                     <span class="blog-category-badge">
                         <?php echo ucfirst(htmlspecialchars($blog['category'])); ?>
                     </span>
+                    <a href="/seva-main/news-stories.php" class="btn-back-icon-sm" title="Back">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
+
+
                 <!-- Author Card -->
                 <div class="author-card mb-3">
                     <span class="author-icon"><i class="fa-solid fa-user"></i></span>
@@ -205,7 +185,6 @@ $conn->close();
             </div>
         </div>
     </div>
-    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container">
             <a class="navbar-brand text-white" href="index.html">
                 <i class="fas fa-arrow-left me-2"></i>Back to Website
@@ -80,7 +80,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" onclick="updateBlog()">Update Blog</button>
+        <button type="button" class="btn btn-danger" onclick="updateBlog()">Update Blog</button>
       </div>
 
     </div>
@@ -93,13 +93,13 @@
         <div class="container">
             <!-- Login Form -->
             <div class="admin-login">
-                <div class="text-center mb-4">
-                    <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                <div class="text-center mb-4 mt-4">
+                    <i class="fas fa-user-shield fa-3x text-danger mb-3"></i>
                     <h2 class="fw-bold">Admin Login</h2>
                     <p class="text-muted">Please login to manage blog content</p>
                 </div>
                 
-                <form id="adminLoginForm">
+                <!-- <form id="adminLoginForm">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" required>
@@ -112,11 +112,29 @@
                         <small class="form-text text-muted">Default: admin123</small>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary w-100">
+                    <button type="submit" class="btn btn-danger w-100">
                         <i class="fas fa-sign-in-alt me-1"></i>Login
                     </button>
-                </form>
-            </div>
+                </form> -->
+                <form id="adminLoginForm" action="http://localhost/seva-main/php/admin_login.php" method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+        <small class="form-text text-muted">Default: admin</small>
+    </div>
+    
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+        <small class="form-text text-muted">Default: admin123</small>
+    </div>
+    
+    <button type="submit" class="btn btn-danger w-100">
+        <i class="fas fa-sign-in-alt me-1"></i> Login
+    </button>
+</form>
+
+              </div>
 
 
         </div>
@@ -129,14 +147,14 @@
 <div>
         <!-- Blog Management -->
 <div class="mb-0">
-    <h2 class="fw-bold mb-4 text-primary text-center">
+    <h2 class="fw-bold mb-4 text-danger text-center">
         <i class="fas fa-blog me-2"></i>Blog Management
     </h2>
 
     <div class="row">
         <!-- LEFT: Blog Creation Form -->
         <div class="col-lg-6 col-md-12">
-            <div class="card shadow-sm border-0 mb-4">
+            <div class="card shadow-sm border-2 mb-4 ">
                 <div class="card-body">
                     <h4 class="fw-bold mb-3 text-secondary">Create New Blog Post</h4>
 
@@ -144,7 +162,8 @@
                         <div class="row g-3">
                             <div class="col-lg-8 col-md-12">
                                 <label for="blogTitle" class="form-label">Blog Title *</label>
-                                <input type="text" class="form-control" id="blogTitle" required>
+                                <input type="text" class="form-control" placeholder="Blog Title" id="blogTitle" required>
+
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <label for="blogCategory" class="form-label">Category</label>
@@ -155,14 +174,23 @@
                                     <option value="events">Events</option>
                                 </select>
                             </div>
+                            <!-- <div class="col-12">
+    <label for="blogHeading" class="form-label">Heading</label>
+    <input type="text" class="form-control" id="blogHeading" placeholder="Enter heading for the blog" />
+</div> -->
+
                             <div class="col-lg-6 col-md-6">
-                                <label for="blogAuthor" class="form-label">Author *</label>
-                                <input type="text" class="form-control" id="blogAuthor" required>
+                                <label for="blogAuthor" class="form-label" >Author *</label>
+                                <input type="text" class="form-control" placeholder="Author Name" id="blogAuthor" required>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <label for="blogImage" class="form-label">Featured Image URL</label>
-                                <input type="url" class="form-control" id="blogImage" placeholder="https://example.com/image.jpg">
+                                <!-- <input type="url" class="form-control" id="blogImage" placeholder="https://example.com/image.jpg">
+                                <small class="text-muted">Leave empty to use default category image</small> -->
+                                <input type="text" class="form-control" id="blogImage" name="image_url" placeholder="images/banner1.jpg">
                                 <small class="text-muted">Leave empty to use default category image</small>
+
+
                             </div>
                             <div class="col-12">
                                 <label for="blogContent" class="form-label">Content *</label>
@@ -176,7 +204,7 @@
                             <button type="button" class="btn btn-outline-secondary me-2" onclick="resetBlogForm()">
                                 <i class="fas fa-undo me-1"></i>Reset
                             </button>
-                            <button type="submit" class="btn btn-primary" id="publishBlog">
+                            <button type="submit" class="btn btn-danger" id="publishBlog">
                                 <i class="fas fa-paper-plane me-1"></i>Publish Blog
                             </button>
                         </div>
@@ -187,12 +215,12 @@
 
         <!-- RIGHT: Existing Blogs -->
 <div class="col-lg-6 col-md-12">
-    <div class="card shadow-sm border-0">
+    <div class="card shadow-sm border-2 ">
         <div class="card-body d-flex flex-column">
             <!-- Card Header -->
             <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                 <h4 class="fw-bold mb-0">Published Blogs</h4>
-                <button class="btn btn-outline-primary btn-sm" onclick="loadBlogs()">
+                <button class="btn btn-outline-danger btn-sm" onclick="loadBlogs()">
                     <i class="fas fa-sync-alt me-1"></i>Refresh
                 </button>
             </div>
@@ -205,14 +233,16 @@
     </div>
 
     <!-- Quick Actions -->
-    <div class="card shadow-sm border-0 mt-4">
+    <div class="card shadow-sm border-2 mt-4 ">
         <div class="card-body">
             <h5 class="fw-bold mb-3">Quick Actions</h5>
             <div class="row">
                 <div class="col-md-12 col-sm-6 mb-3">
-                    <a href="blogs.html" class="btn btn-outline-primary w-100">
-                        <i class="fas fa-eye me-1"></i>View Public Blogs
-                    </a>
+
+                    <button class="btn btn-outline-info w-100" onclick="showStatistics()">
+                        <i class="fas fa-chart-bar me-1"></i>View Statistics
+                    </button>
+
                 </div>
                 <div class="col-md-12 col-sm-6 mb-3">
                     <button class="btn btn-outline-success w-100" onclick="exportBlogs()">
@@ -220,14 +250,16 @@
                     </button>
                 </div>
                 <div class="col-md-12 col-sm-6 mb-3">
-                    <button class="btn btn-outline-info w-100" onclick="showStatistics()">
-                        <i class="fas fa-chart-bar me-1"></i>View Statistics
-                    </button>
-                </div>
-                <div class="col-md-12 col-sm-6">
-                    <button class="btn btn-outline-warning w-100" onclick="backupBlogs()">
-                        <i class="fas fa-shield-alt me-1"></i>Backup Data
-                    </button>
+    <a href="php/blogs.php" class="btn btn-outline-danger w-100">
+        <i class="fas fa-eye me-1"></i>View Blogs
+    </a>
+</div>
+
+                <div class="col-md-12 col-sm-6 ">
+                    <a href="news-stories.php" class="btn btn-outline-danger w-100">
+                        <i class="fas fa-eye me-1"></i>View News
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -237,72 +269,12 @@
     </div>
 </div>
 
-
-        <!-- Statistics -->
-        <!-- <div class="row g-4 mb-4">
-            <div class="card row shadow-sm border-0">
-            <div class="col-lg-3 col-md-6">
-
-                <div class="card bg-primary text-white shadow-sm border-0 ">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h6>Total Blogs</h6>
-                                <h2 id="totalBlogs">0</h2>
-                            </div>
-                            <div class="align-self-center"><i class="fas fa-blog fa-2x"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card bg-success text-white">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h6>Published Today</h6>
-                                <h2 id="todayBlogs">0</h2>
-                            </div>
-                            <div class="align-self-center"><i class="fas fa-calendar-day fa-2x"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card bg-info text-white">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h6>Impact Stories</h6>
-                                <h2 id="impactStories">0</h2>
-                            </div>
-                            <div class="align-self-center"><i class="fas fa-heart fa-2x"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card bg-warning text-white">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h6>News Articles</h6>
-                                <h2 id="newsArticles">0</h2>
-                            </div>
-                            <div class="align-self-center"><i class="fas fa-newspaper fa-2x"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> -->
-
-        <div class="card shadow-sm border-0 mb-2">
+<div class="card shadow-sm border-0 mb-2 background-color">
   <div class="card-body">
     <div class="row g-4">
       
       <div class="col-lg-3 col-md-6">
-        <div class="card bg-primary text-white h-60">
+        <div class="card bg-danger text-white h-60">
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <div>
@@ -395,41 +367,47 @@
     
     <script>
         // Additional admin functions
-        function updateStatistics() {
-            const blogs = getBlogsFromStorage();
-            const today = new Date().toDateString();
+        // function updateStatistics() {
+        //     const blogs = getBlogsFromStorage();
+        //     const today = new Date().toDateString();
             
-            document.getElementById('totalBlogs').textContent = blogs.length;
+        //     document.getElementById('totalBlogs').textContent = blogs.length;
             
-            const todayBlogs = blogs.filter(blog => 
-                new Date(blog.publishDate).toDateString() === today
-            ).length;
-            document.getElementById('todayBlogs').textContent = todayBlogs;
+        //     const todayBlogs = blogs.filter(blog => 
+        //         new Date(blog.publishDate).toDateString() === today
+        //     ).length;
+        //     document.getElementById('todayBlogs').textContent = todayBlogs;
             
-            const impactStories = blogs.filter(blog => 
-                blog.category === 'impact-stories'
-            ).length;
-            document.getElementById('impactStories').textContent = impactStories;
+        //     const impactStories = blogs.filter(blog => 
+        //         blog.category === 'impact-stories'
+        //     ).length;
+        //     document.getElementById('impactStories').textContent = impactStories;
             
-            const newsArticles = blogs.filter(blog => 
-                blog.category === 'news'
-            ).length;
-            document.getElementById('newsArticles').textContent = newsArticles;
-        }
+        //     const newsArticles = blogs.filter(blog => 
+        //         blog.category === 'news'
+        //     ).length;
+        //     document.getElementById('newsArticles').textContent = newsArticles;
+        // }
+        
+        // function exportBlogs() {
+        //     const blogs = getBlogsFromStorage();
+        //     const dataStr = JSON.stringify(blogs, null, 2);
+        //     const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+        //     const link = document.createElement('a');
+        //     link.href = URL.createObjectURL(dataBlob);
+        //     link.download = `akshaya_patra_blogs_${new Date().toISOString().split('T')[0]}.json`;
+        //     link.click();
+            
+        //     showAlert('Blogs exported successfully!', 'success');
+        // }
         
         function exportBlogs() {
-            const blogs = getBlogsFromStorage();
-            const dataStr = JSON.stringify(blogs, null, 2);
-            const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(dataBlob);
-            link.download = `akshaya_patra_blogs_${new Date().toISOString().split('T')[0]}.json`;
-            link.click();
-            
-            showAlert('Blogs exported successfully!', 'success');
-        }
-        
+  window.location.href = 'php/export_blogs.php';
+  showAlert('Export started. Check your downloads.', 'success');
+}
+
+
         function backupBlogs() {
             const blogs = getBlogsFromStorage();
             const backupKey = `akshaya_patra_blogs_backup_${Date.now()}`;
@@ -437,65 +415,64 @@
             
             showAlert('Blogs backed up successfully!', 'success');
         }
-        
-        function showStatistics() {
-            const blogs = getBlogsFromStorage();
-            
-            let statsHtml = `
-                <div class="statistics-modal">
-                    <h4>Blog Statistics</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total Blogs:</span>
-                            <strong>${blogs.length}</strong>
-                        </li>
-            `;
-            
-            const categories = ['impact-stories', 'news', 'programs', 'events'];
-            categories.forEach(category => {
-                const count = blogs.filter(blog => blog.category === category).length;
-                const categoryName = category.split('-').map(word => 
-                    word.charAt(0).toUpperCase() + word.slice(1)
-                ).join(' ');
-                
-                statsHtml += `
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>${categoryName}:</span>
-                        <strong>${count}</strong>
-                    </li>
-                `;
-            });
-            
-            statsHtml += '</ul></div>';
-            
-            const modal = document.createElement('div');
-            modal.className = 'modal fade';
-            modal.innerHTML = `
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Statistics</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            ${statsHtml}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-            const bootstrapModal = new bootstrap.Modal(modal);
-            bootstrapModal.show();
-            
-            modal.addEventListener('hidden.bs.modal', function() {
-                document.body.removeChild(modal);
-            });
-        }
-        
+function showStatistics() {
+  fetch('php/get_blog_statistics.php')
+    .then(res => res.json())
+    .then(stats => {
+      let statsHtml = `
+        <div class="statistics-modal">
+          <h4>Blog Statistics</h4>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total Blogs:</span>
+              <strong>${stats.total_blogs}</strong>
+            </li>
+      `;
+
+      ['impact-stories', 'news', 'programs', 'events'].forEach(category => {
+        const categoryName = category.split('_').map(word =>
+          word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ');
+        statsHtml += `
+          <li class="list-group-item d-flex justify-content-between">
+            <span>${categoryName}:</span>
+            <strong>${stats[category]}</strong>
+          </li>
+        `;
+      });
+
+      statsHtml += '</ul></div>';
+
+      const modal = document.createElement('div');
+      modal.className = 'modal fade';
+      modal.innerHTML = `
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Statistics</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              ${statsHtml}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+      const bootstrapModal = new bootstrap.Modal(modal);
+      bootstrapModal.show();
+
+      modal.addEventListener('hidden.bs.modal', () => {
+        document.body.removeChild(modal);
+      });
+    })
+    .catch(err => console.error('Failed to load blog statistics:', err));
+}
+
         // Update statistics when blogs are loaded
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(updateStatistics, 1000);

@@ -22,36 +22,36 @@
 </head>
 <body>
     <!-- Navigation -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top" aria-label="Main navigation">
         <div class="container">
-         <a class="navbar-brand" href="index.html">
-    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
-    <span class="fw-bold text-sankat" style="color: #e62d26; margin-top: 5px; display: inline-block;">Sankat Saathi</span>
-</a>
-
+            <a class="navbar-brand" href="index.html">
+                <img src="sankatsaathi.png" alt="Sankat Saathi Seva Foundation Logo" class="me-2" width="40" height="40">
+                <span class="fw-bold text-primary">Sankat Saathi</span>
+            </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-5 me-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="who-we-are.html">Who We Are</a>
                     </li>
-                        <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="what-we-do.html">What We Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news-stories.html">News & Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-to-help.html">How To Help</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="get-involved.html">Get Involved</a>
                     </li>
-                 
-                    <li class="nav-item">
-                        <a class="nav-link" href="how-tohelp.html">How To Help</a>
-                    </li>
-                
                     <li class="nav-item">
                         <a class="nav-link" href="impact-reports.html">Impact Reports</a>
-                    </li>
-                       <li class="nav-item">
-                        <a class="nav-link" href="news-stories.php">News & Stories</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blogs.html">Blogs</a>
@@ -59,69 +59,62 @@
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="#donate" class="btn  me-2 " style="background-color: #e62d26; color:white;">Donate Now</a>
-                    <a href="admin.html" class="btn  admin-btn">Admin</a>
-                    <style>.admin-btn {border: 1px solid black;color: black;transition: all 0.3s ease;}.admin-btn:hover {background-color: rgb(85, 84, 84);color: white;}</style>
-
-                </div>
-            </div>
-        </div>
-    </nav> -->
-                    
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-         <a class="navbar-brand" href="index.html">
-    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
-    <span class="fw-bold text-sankat" style="color: #e62d26; margin-top: 5px; display: inline-block;">Sankat Saathi</span>
-</a>
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-5 me-auto">
-                    <li class="nav-item ">
-                            <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="get-involved.html">Get Involved</a>
-                    </li>
-                 
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="how-tohelp.html">How To Help</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="impact-reports.html">Impact Reports</a>
-                    </li>
-                       <li class="nav-item">
-                        <a class="nav-link" href="news-stories.php">News & Stories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blogs.php">Blogs</a>
-
-                    </li>
-                </ul>
-                
-                <div class="d-flex">
-                    <a href="#donate" class="btn  me-2 " style="background-color: #e62d26; color:white;">Donate Now</a>
-                    <a href="admin.html" class="btn  admin-btn">Admin</a>
-                    <style>.admin-btn {border: 1px solid black;color: black;transition: all 0.3s ease;}.admin-btn:hover {background-color: rgb(85, 84, 84);color: white;}</style>
-
+                    <a href="index.html#donate" class="btn btn-primary me-2">Donate Now</a>
+                    <a href="admin.html" class="btn btn-outline-secondary">Admin</a>
                 </div>
             </div>
         </div>
     </nav>
-    
-    <img src='banner.jpg' alt="Children enjoying nutritious meals provided by Akshaya Patra" class="img-fluid rounded shadow">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
+                <span class="fw-bold text-sankat" style="color: #e62d26;">Sankat Saathi</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="what-we-do.html">What We Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news-stories.php">News & Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-to-help.html">How To Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="get-involved.html">Get Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="impact-reports.html">Impact Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#donate" class="btn btn-primary me-2 ">Donate Now</a>
+                    <a href="admin.html" class="btn btn-outline-secondary">Admin</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+                    <img src="https://images.unsplash.com/photo-1617871567290-7e869f0b8161?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Children enjoying nutritious meals provided by Akshaya Patra" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vision and Mission -->
-    <section class="section-padding bg-light py-5">
+    <section class="section-padding bg-light mt-4 py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Our Vision & Mission</h2>
@@ -153,6 +146,14 @@
             </div>
         </div>
     </section>
+
+    <section class="section-padding">
+  <div class="container">
+    <div class="row" id="impact-stories ">
+      <?php include 'php/impact_stories.php'; ?>
+    </div>
+  </div>
+</section>
 
     <!-- Core Values -->
     <section class="section-padding py-5">
@@ -363,7 +364,7 @@
                     <h6 class="fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li><a href="who-we-are.html" class="text-light text-decoration-none">Who We Are</a></li>
-                        <li><a href="about.html" class="text-light text-decoration-none">What We Do</a></li>
+                        <li><a href="what-we-do.html" class="text-light text-decoration-none">What We Do</a></li>
                         <li><a href="impact-reports.html" class="text-light text-decoration-none">Impact Reports</a></li>
                         <li><a href="blogs.html" class="text-light text-decoration-none">Blogs</a></li>
                     </ul>

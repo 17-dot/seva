@@ -16,10 +16,145 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+  .hero-overlay {
+    height: 100vh; /* full viewport height */
+    background: url('YOUR_BACKGROUND_IMAGE_URL') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    /* align-items: center;     */
+    justify-content: center;  /* horizontal centering */
+    text-align: center;
+    color: #fff; /* white text */
+    font-family: 'Poppins', sans-serif; /* attractive, clean font */
+    padding-top: 100px; /* same as above */
+  }
+  .hero-overlay h1 {
+    font-weight: 900; /* extra bold */
+    font-size: 4rem;  /* larger */
+  }
+  .hero-overlay p.lead {
+    font-weight: 600;
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  
+.navbar-nav .nav-item {
+      margin-right: 12px;
+    }
+    .navbar-nav .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    /* Dropdown hidden by default */
+    .navbar-nav .nav-item .dropdown {
+      display: none;
+      position: absolute;
+      background: #fff;
+      padding: 10px 0;
+      margin-top: 5px;
+      list-style: none;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      z-index: 1000;
+    }
+
+    /* Show dropdown on hover */
+    .navbar-nav .nav-item:hover > .dropdown {
+      display: block;
+    }
+
+    /* Dropdown items */
+    .navbar-nav .dropdown li {
+      padding: 0;
+    }
+
+    .navbar-nav .dropdown li a {
+      display: block;
+      padding: 10px 15px;
+      color: #000;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    /* Hover effect on dropdown items */
+    .navbar-nav .dropdown li a:hover {
+      background: #f5f5f5;
+      color: #e62d26;
+    }
+
+    /* Navbar underline effect */
+    .navbar-nav .nav-link {
+      position: relative;
+      display: inline-block;
+      color: #000;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background-color: #e62d26;
+      transition: width 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    /* Hover underline */
+    .navbar-nav .nav-link:hover::after {
+      width: 90%;
+    }
+
+    /* Keep underline on active/current page */
+    .navbar-nav .nav-link.active::after {
+      width: 95%;
+    }
+
+    /* Active & hover text color */
+    .nav-link:hover,
+    .nav-link.active {
+      color: #e62d26 !important;
+    }
+
+    /* Another version of nav-link (custom) */
+    .navbar-nav .nav-link1 {
+      position: relative;
+      display: inline-block;
+      color: #000;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background-color: #e62d26;
+      transition: width 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    .nav-link1:hover,
+    .nav-link1.active {
+      color: #e62d26 !important;
+    }
+</style>
+
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
          <a class="navbar-brand" href="index.html">
     <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
@@ -51,7 +186,54 @@
                         <a class="nav-link" href="news-stories.php">News & Stories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blogs.html">Blogs</a>
+                        <a class="nav-link" href="blogs.php">Blogs</a>
+
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="#donate" class="btn  me-2 " style="background-color: #e62d26; color:white;">Donate Now</a>
+                    <a href="admin.html" class="btn  admin-btn">Admin</a>
+                    <style>.admin-btn {border: 1px solid black;color: black;transition: all 0.3s ease;}.admin-btn:hover {background-color: rgb(85, 84, 84);color: white;}</style>
+
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+         <a class="navbar-brand" href="index.html">
+    <img src="sankatsaathi.png" alt="Sankat Saathi" class="me-2" style="width:50px; height:auto;">
+    <span class="fw-bold text-sankat" style="color: #e62d26; margin-top: 5px; display: inline-block;">Sankat Saathi</span>
+</a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-5 me-auto">
+                    <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="get-involved.html">Get Involved</a>
+                    </li>
+                 
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="how-tohelp.html">How To Help</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="impact-reports.html">Impact Reports</a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="news-stories.php">News & Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.php">Blogs</a>
+
                     </li>
                 </ul>
                 
@@ -66,21 +248,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="height: 60vh; background-image: url('https://pixabay.com/get/g3913e44124893ee08fda615d3f4b2affc0cf9c675cfd6122ecd09e1b69f85a4f7e1fd2c2be4598fc5b7f04e5b489083f75b561a1ccbe309703e1191a5b504501_1280.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="row align-items-center h-100">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold text-white mb-4">News & Stories</h1>
-                        <p class="lead text-white">Discover the latest updates, achievements, and inspiring stories from our mission to eliminate classroom hunger.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero-section" style="
+    height: 60vh;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;">
+<div class="hero-overlay">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1>News & Stories</h1>
+        <p class="lead">Discover the latest updates, achievements, and inspiring stories from our mission to eliminate classroom hunger.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
     <!-- Latest News Section -->
-    <section class="section-padding">
+    <!-- <section class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Latest News</h2>
@@ -179,12 +365,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Latest News Section -->
 <section class="section-padding">
-    <div class="container">
-        <div class="text-center mb-5">
+    <div class="container mb-4">
+        <div class="text-center mb-5 mt-3">
+
             <h2 class="fw-bold">Latest News</h2>
             <p class="lead">Stay updated with our recent achievements and milestones</p>
         </div>
@@ -196,97 +383,19 @@
 </section>
 
 
-    <!-- Impact Stories Section -->
-    <section class="section-padding bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Impact Stories</h2>
-                <p class="lead">Real stories from children whose lives have been transformed</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="https://pixabay.com/get/g3913e44124893ee08fda615d3f4b2affc0cf9c675cfd6122ecd09e1b69f85a4f7e1fd2c2be4598fc5b7f04e5b489083f75b561a1ccbe309703e1191a5b504501_1280.jpg" class="img-fluid h-100 object-fit-cover rounded-start" alt="Gungun's Story">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body h-100 d-flex flex-column">
-                                    <span class="badge bg-primary align-self-start mb-2">Impact Story</span>
-                                    <h4 class="fw-bold">Gungun Aspires to Become an English Teacher</h4>
-                                    <p class="flex-grow-1">Gungun Kashyap is one of the 2.2 million beneficiaries of Akshaya Patra's mid-day meal programme and wishes to become an English Teacher. With nutritious meals supporting her education, she's pursuing her dreams with determination.</p>
-                                    <a href="#" class="btn btn-outline-primary align-self-start">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 mb-5">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="https://pixabay.com/get/gcb89cd2c6748c93d1b4a00f606a8843899b7a38470ccfeb7c85b9252f440a54306b4f0f7e2712d6d743436fac38c6fa42934db75bde6f3aca78cea5fe78f04cf_1280.jpg" class="img-fluid h-100 object-fit-cover rounded-start" alt="Gayatri's Story">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body h-100 d-flex flex-column">
-                                    <span class="badge bg-primary align-self-start mb-2">Impact Story</span>
-                                    <h4 class="fw-bold">Poetry and Purpose: Gayatri's Aspiring Future</h4>
-                                    <p class="flex-grow-1">Akshaya Patra supports Gayatri from Hampi with daily meals, helping her stay focused on studies and dream of becoming a bank manager and poet. Her creativity flourishes with proper nutrition.</p>
-                                    <a href="#" class="btn btn-outline-primary align-self-start">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 mb-5">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="https://pixabay.com/get/g9bb6793dcd3f1db26411f2ed4bf81247c9cbeffa8ac8ab6e33d45d69e7bdac3c0e364aed0dd4eb105a5f9cf4941f4429bc70f76e556f373a930b566aed987760_1280.jpg" class="img-fluid h-100 object-fit-cover rounded-start" alt="Shayan's Story">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body h-100 d-flex flex-column">
-                                    <span class="badge bg-primary align-self-start mb-2">Impact Story</span>
-                                    <h4 class="fw-bold">From Loss to Law: Shayan's Fight for Justice</h4>
-                                    <p class="flex-grow-1">Akshaya Patra supports Shayan, a 7th grader from Karnataka, with nutritious meals as he aspires to become a police officer and serve his community with dedication and integrity.</p>
-                                    <a href="#" class="btn btn-outline-primary align-self-start">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 mb-5">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="https://pixabay.com/get/gae869dcc4a514a3d23c8ce91e69b933bc6b9e67e43488e6de90ad6ee543a70ff7c7ab01f95969241d4b6f0a9908c71a73d0b6e2c535ea651ed631427cd4eec7c_1280.jpg" class="img-fluid h-100 object-fit-cover rounded-start" alt="Priyavarshini's Story">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body h-100 d-flex flex-column">
-                                    <span class="badge bg-primary align-self-start mb-2">Impact Story</span>
-                                    <h4 class="fw-bold">Priyavarshini – A Chef in the Making</h4>
-                                    <p class="flex-grow-1">Priyavarshini, an 8th grader from Pondicherry, dreams of becoming a chef and opening her own restaurant one day. Akshaya Patra's meals fuel her culinary aspirations.</p>
-                                    <a href="#" class="btn btn-outline-primary align-self-start">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="blogs.html" class="btn btn-primary btn-lg">View All Stories</a>
-            </div>
-        </div>
-    </section>
+<section class="section-padding">
+  <div class="container">
+    <div class="row" id="impact-stories ">
+      <?php include 'php/impact_stories.php'; ?>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Testimonials Section -->
     <section class="section-padding">
-        <div class="container">
+        <div class="container mt-3">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">What Our Partners Say</h2>
                 <p class="lead">Hear from our biggest contributors and supporters</p>
@@ -296,7 +405,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"While we at NCML had heard about Akshaya Patra via various films, news articles, and images about the fabulous work it does tirelessly every day, visiting the schools and kitchens was really an eye-opener and a highly recommended experience for everyone."</p>
                         </div>
                         <div class="testimonial-author">
@@ -309,7 +418,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"Hunger is not a natural disaster but man-made one to a large extent. Hence, I feel, it is our duty to make India hunger-free. It was pleasant to know about the implementation of the Mid-Day Meal Programme by The Sankat Saathi Seva Foundation."</p>
                         </div>
                         <div class="testimonial-author">
@@ -322,7 +431,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="testimonial-card">
                         <div class="testimonial-content mb-4">
-                            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                            <i class="fas fa-quote-left fa-2x text-danger mb-3"></i>
                             <p>"The Sankat Saathi Seva Foundation's implementation of the Mid-Day Meal Programme is a great initiative to address two Sustainable Development Goals – Zero Hunger and Quality Education with nutritious and quality food."</p>
                         </div>
                         <div class="testimonial-author">
@@ -336,14 +445,15 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-4">Be Part of Our Story</h2>
+    <section class="section-padding bg-danger text-white ">
+        <div class="container text-center mt-3">
+            <h2 class="fw-bold mb-4 mt-3">Be Part of Our Story</h2>
             <p class="lead mb-4">Help us create more success stories and transform more lives through nutrition and education</p>
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <a href="how-to-help.html" class="btn btn-light btn-lg me-3 mb-2">Support Our Mission</a>
-                    <a href="get-involved.html" class="btn btn-outline-light btn-lg mb-2">Share Your Story</a>
+                <div class="col-md-6 mb-4">
+                    <a href="how-tohelp.html" class="btn btn-dark btn-lg me-3 mb-2">Support Our Mission</a>
+
+                    <a href="get-involved.html" class="btn btn-dark btn-lg me-3 mb-2">Share Your Story</a>
                 </div>
             </div>
         </div>
@@ -378,7 +488,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h6 class="fw-bold mb-3">Get Involved</h6>
                     <ul class="list-unstyled">
-                        <li><a href="how-to-help.html" class="text-light text-decoration-none">How To Help</a></li>
+                        <li><a href="how-tohelp.html" class="text-light text-decoration-none">How To Help</a></li>
+
                         <li><a href="get-involved.html" class="text-light text-decoration-none">Volunteer</a></li>
                         <li><a href="index.html#donate" class="text-light text-decoration-none">Donate</a></li>
                         <li><a href="get-involved.html" class="text-light text-decoration-none">Partner With Us</a></li>

@@ -40,7 +40,8 @@ function displayBlogs(blogs) {
             <div class="card blog-card h-100 border-0 shadow-sm">
                 <img src="${blog.imageUrl}" class="card-img-top" alt="${blog.title}" 
                      style="height: 250px; object-fit: cover;"
-                     onerror="this.src='${getDefaultBlogImage(blog.category)}'">
+                     onerror="this.onerror=null;this.src='images/default-${blog.category}.jpeg';">
+
                 <div class="card-body d-flex flex-column">
                     <div class="blog-meta mb-2">
                         <small class="text-muted">
