@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do - Sankat Saathi Seva Foundation</title>
+    <style>
+        /* Minimal CSS to match a charitable theme: clean, blue accents, sans-serif fonts */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        a { text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+        /* Header and Nav styles */
+        header { background: #f8f9fa; padding: 20px; border-bottom: 1px solid #ddd; }
+        .logo { font-size: 24px; font-weight: bold; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav li { margin-right: 20px; position: relative; }
+        nav li a { padding: 10px; display: block; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+        .dropdown li { margin: 0; }
+        .dropdown li a { padding: 10px 20px; white-space: nowrap; }
+        li:hover .dropdown { display: block; }
+        .actions a { margin-left: 10px; background: #007bff; color: white; padding: 10px 15px; border-radius: 5px; }
+        .actions a:hover { background: #0056b3; text-decoration: none; }
+        /* Hero section */
+        .hero { background: #e9f7ff; padding: 50px 20px; text-align: center; }
+        .hero h1 { font-size: 36px; }
+        .hero p { font-size: 18px; }
+        /* Program sections */
+        .programs { padding: 50px 20px; }
+        .program-card { margin-bottom: 40px; text-align: center; }
+        .program-card h2 { font-size: 28px; color: #007bff; }
+        .program-card p { font-size: 16px; }
+        .program-card a { color: #007bff; font-weight: bold; }
+        /* Footer */
+        footer { background: #f8f9fa; padding: 40px 20px; border-top: 1px solid #ddd; text-align: center; }
+        footer .footer-content { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        footer .section { margin: 20px; }
+        footer .section h4 { font-size: 18px; }
+        footer ul { list-style: none; padding: 0; }
+        footer ul li { margin-bottom: 10px; }
+        footer .copyright { margin-top: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header similar to index.html, with added "What We Do" and dropdown -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Sankat Saathi</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li>
+                        <a href="what-we-do.html">What We Do</a>
+                        <ul class="dropdown">
+                            <li><a href="#ambulance-seva">Ambulance Seva</a></li>
+                            <li><a href="#food-distribution">Food Distribution</a></li>
+                            <li><a href="#child-education">Child Education</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="impact-reports.html">Impact Reports</a></li>
+                    <li><a href="news-stories.html">News & Stories</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+                <div class="actions">
+                    <a href="donate.html">Donate Now</a>
+                    <a href="admin.html">Admin</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section adapted for What We Do -->
+    <section class="hero">
+        <div class="container">
+            <h1>What We Do</h1>
+            <p>Join us in our mission to provide essential services like ambulance support, food distribution, and child education to uplift communities across India.</p>
+        </div>
+    </section>
+
+    <!-- Programs section with the 3 facilities, styled like "How We Work" cards in index.html -->
+    <section class="programs">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Our Key Initiatives</h2>
+            
+            <div class="program-card" id="ambulance-seva">
+                <h2>Ambulance Seva</h2>
+                <p>Our Ambulance Seva provides critical emergency medical transportation to underserved areas, saving lives and ensuring timely healthcare access. With a fleet ready to respond, we partner with local hospitals to bridge gaps in medical emergencies.</p>
+                <a href="#">Learn More</a>
+            </div>
+            
+            <div class="program-card" id="food-distribution">
+                <h2>Food Distribution</h2>
+                <p>Through our Food Distribution program, we deliver nutritious meals to millions of children and families in need, combating hunger and malnutrition. This includes mid-day meals in schools and support for homeless mothers and Anganwadi centers.</p>
+                <a href="#">Learn More</a>
+            </div>
+            
+            <div class="program-card" id="child-education">
+                <h2>Child Education</h2>
+                <p>Our Child Education initiative supports the Right to Education by providing meals, learning resources, and scholarships to children from socio-economically challenged backgrounds, helping them stay in school and achieve their dreams.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer adapted from index.html, added "What We Do" to Quick Links -->
+    <footer>
+        <div class="footer-content">
+            <div class="section">
+                <a href="index.html" class="logo">Sankat Saathi Seva Foundation</a>
+                <p>Eliminating classroom hunger and supporting the Right to Education of children from socio-economically challenging backgrounds.</p>
+                <!-- Placeholder for social icons -->
+                <div class="social-icons">
+                    <!-- Add icons as in index if needed -->
+                </div>
+            </div>
+            <div class="section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="impact-reports.html">Impact Reports</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="#">How To Help</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="#">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h4>Contact Info</h4>
+                <p>Bihar, India</p>
+                <p>help@sankatsaathi.org</p>
+                <p>+91 000000000</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Sankat Saathi Seva Foundation. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>

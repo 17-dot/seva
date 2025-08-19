@@ -33,16 +33,16 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-5 me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                    <li class="nav-item ">
+                            <a class="nav-link active" href="about.html">About Us</a>
                     </li>
                         <li class="nav-item">
                         <a class="nav-link" href="get-involved.html">Get Involved</a>
                     </li>
                  
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="how-tohelp.html">How To Help</a>
-                    </li>
+                    </li> -->
                 
                     <li class="nav-item">
                         <a class="nav-link" href="impact-reports.html">Impact Reports</a>
@@ -134,7 +134,7 @@
     <!-- Main Programs Section -->
     <section class="section-padding bg-light"style="margin-top:40px;" >
         <div class="container">
-            <div class="text-center mb-5" >
+            <div class="text-center mb-5" style="padding-top: 10px;" >
                 <h2 class="fw-bold" >How We Work to Make a Difference</h2>
                 <p class="lead">Our comprehensive programs address various aspects of nutrition and education</p>
             </div>
@@ -280,7 +280,7 @@
     <!-- SDG Alignment -->
     <section class="section-padding bg-light">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" style="padding-top: 1px;">
                 <h2 class="fw-bold" style="margin-top: 40px;">Sustainable Development Goals</h2>
                 <p class="lead">Our work directly contributes to multiple UN Sustainable Development Goals</p>
             </div>
@@ -402,12 +402,12 @@
                 
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6 class="fw-bold mb-3">Quick Links</h6>
-                    <!-- <ul class="list-unstyled">
-                        <li><a href="who-we-are.html" class="text-light text-decoration-none">Who We Are</a></li>
-                        <li><a href="what-we-do.html" class="text-light text-decoration-none">a</a></li>
+                    <ul class="list-unstyled">
+                        <li><a href="who-we-are.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="what-we-do.html" class="text-light text-decoration-none">Get Involved</a></li>
                         <li><a href="impact-reports.html" class="text-light text-decoration-none">Impact Reports</a></li>
                         <li><a href="blogs.html" class="text-light text-decoration-none">Blogs</a></li>
-                    </ul> -->
+                    </ul>
                 </div>
                 
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -449,5 +449,16 @@
     
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
